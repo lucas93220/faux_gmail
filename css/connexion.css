@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+header{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    box-shadow:0 0 10px #abaaaa;
+    }
+
+.logo{
+    max-width: 11rem;
+    margin-left: 1rem;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+header nav ul{
+    width:100%; 
+}
+
+ul li a{
+    padding: 2rem;
+    color: #8e8e8e;
+    transition: all .2s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+}
+
+li{
+    margin-top: 1.7rem; 
+}
+
+nav ul li:hover a{
+    background: #d5473b;
+    color:white;
+}
+
+/* .formulaire{
+    width: 100vw;
+    height: 100vh;
+} */
+
+section h2 {
+    color: white;
+    margin: 0% 60% 0% 10%;
+    padding-top: 30rem;
+    padding-bottom: 5rem;
+    font-size: 5rem;
+    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
+}
+.create{
+    margin: 1% 0% 0% 10%;
+    padding: 2rem;
+    border: 0;
+    color: #ffffff;
+    font-weight: lighter;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #d5473b;
+}
+
+
+div h2 {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-weight: 300;
+    font-size: xx-large;
+    margin: 5% 30% 5% 30%;
+}
+
+fieldset{
+    
+    width: 45%;
+    margin: 1rem auto;
+    border-radius: 5px;
+    border: 2px solid #eae9e9;
+}
+legend{
+    font-size: 2.5rem;
+    font-weight: lighter;
+    padding: 1rem;
+    font-family: 'Open Sans', sans-serif;
+}
+label{
+    font-size: 1.6rem;
+}
+
+form input {
+    display: inline-block;
+    background-color: #f8f5f5;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    color: #000000;
+    padding: 12px;
+    width: 100%;
+    border: 1px outset #eae9e9;
+    margin: 1rem auto;
+}
+.bouton{
+    text-align: center;
+}
+fieldset form div input[type="submit"] {
+    display: inline-block;
+    background-color: #1a73e8;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px;
+    width: 250px;
+    max-width: 100%;
+    max-height: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+fieldset form div input:hover, input:focus[type="submit"]{
+    background: #1a73e8;
+    
+    
+
+}
