@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Gmail</title>
 </head>
 
@@ -60,5 +61,35 @@
     <footer>
 
     </footer>
+
+    <a href="#account" class="scroll_down"> <i class="material-symbols-outlined">
+        expand_less
+    </i></a>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+<script>
+// Rendre le bouton visible lorsque l'utilisateur fait défiler la page
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// Fonction pour remonter en haut de la page
+function topFunction() {
+  document.body.scrollTop = 0; // Pour Safari
+  document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
+}
+
+// Fonction pour redescendre tout en bas de la page
+function bottomFunction() {
+  document.body.scrollTop = document.body.scrollHeight; // Pour Safari
+  document.documentElement.scrollTop = document.documentElement.scrollHeight; // Pour Chrome, Firefox, IE et Opera
+}
+</script>
 </body>
 </html>

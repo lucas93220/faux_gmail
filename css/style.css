@@ -18,6 +18,10 @@ header{
 
 }
 
+.navigation li:nth-child(3) a {
+    background-color: #d5473b;
+    color: #fff;
+}
 
 header nav ul{
     width:100%; 
@@ -138,3 +142,32 @@ fieldset form div input:hover, input:focus[type="submit"]{
     
 
 }
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 50px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #d5473b;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  #myBtn:hover {
+    background-color: #ab1d10;
+  }
+  
+  #myBtn::before {
+    content: "\e5ce";
+    font-size: 20px;
+    color: white;
+    display: block;
+    margin: 0 auto;
+  }
