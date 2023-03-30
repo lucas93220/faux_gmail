@@ -19,10 +19,6 @@ header{
 
 }
 
-.navigation li:nth-child(3) a {
-    background-color: #d5473b;
-    color: #fff;
-}
 
 header nav ul{
     width:100%; 
@@ -43,7 +39,10 @@ nav ul li:hover a{
     background: #d5473b;
     color:white;
 }
-
+.navigation li:nth-child(3) a {
+    background-color: #d5473b;
+    color: #fff;
+}
 /* .formulaire{
     width: 100vw;
     height: 100vh;

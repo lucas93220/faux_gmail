@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
-header{
+
+header {
     display: flex;
     width: 100%;
     background-color: white;
     justify-content: space-between;
     position: fixed;
-    box-shadow:0 0 10px #abaaaa;
-    }
+    box-shadow: 0 0 10px #abaaaa;
+}
 
-.logo{
+.logo {
     max-width: 11rem;
     margin-left: 1rem;
 }
-.navigation{
+
+.navigation {
     display: flex;
     flex-direction: row;
-
 }
 
 .navigation li:nth-child(3) a {
@@ -23,35 +24,31 @@ header{
     color: #fff;
 }
 
-header nav ul{
-    width:100%; 
+header nav ul {
+    width: 100%;
 }
 
-ul li a{
+ul li a {
     padding: 2rem;
     color: #8e8e8e;
     transition: all .2s ease-in-out;
     font-family: 'Open Sans', sans-serif;
 }
 
-li{
-    margin-top: 1.7rem; 
+li {
+    margin-top: 1.7rem;
 }
 
-nav ul li:hover a{
+nav ul li:hover a {
     background: #d5473b;
-    color:white;
+    color: white;
 }
-section{
-    background-image:url("../asset/home-hero.jpg");
+
+section {
+    background-image: url("../asset/home-hero.jpg");
     width: 100vw;
     height: 100vh;
     background-size: cover;
-}
-
-.formulaire{
-    width: 100vw;
-    height: 100vh;
 }
 
 section h2 {
@@ -63,7 +60,8 @@ section h2 {
     font-weight: lighter;
     font-family: 'Open Sans', sans-serif;
 }
-.create{
+
+.create {
     margin: 1% 0% 0% 10%;
     padding: 2rem;
     border: 0;
@@ -73,8 +71,6 @@ section h2 {
     background-color: #d5473b;
 }
 
-
-
 div h2 {
     font-family: "Open Sans", sans-serif;
     text-align: center;
@@ -83,27 +79,30 @@ div h2 {
     margin: 5% 40% 5% 40%;
 }
 
-div h3{
+div h3 {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     font-weight: 300;
     margin: 0% 38% 2% 38%;
 }
-
-fieldset{
-    
+.formulaire{
+    padding-bottom: 10rem;
+}
+fieldset {
     width: 45%;
     margin: 1rem auto;
     border-radius: 5px;
     border: 2px solid #eae9e9;
 }
-legend{
+
+legend {
     font-size: 2.5rem;
     font-weight: lighter;
     padding: 1rem;
     font-family: 'Open Sans', sans-serif;
 }
-label{
+
+label {
     font-size: 1.6rem;
 }
 
@@ -118,9 +117,11 @@ form input {
     border: 1px outset #eae9e9;
     margin: 1rem auto;
 }
-.bouton{
+
+.bouton {
     text-align: center;
 }
+
 fieldset form div input[type="submit"] {
     display: inline-block;
     background-color: #1a73e8;
@@ -147,7 +148,6 @@ fieldset form div input:hover, input:focus[type="submit"]{
     position: fixed;
     bottom: 20px;
     right: 30px;
-    width: 50px;
     z-index: 99;
     font-size: 18px;
     border: none;
@@ -165,9 +165,17 @@ fieldset form div input:hover, input:focus[type="submit"]{
   }
   
   #myBtn::before {
-    content: "\e5ce";
     font-size: 20px;
     color: white;
     display: block;
     margin: 0 auto;
   }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}

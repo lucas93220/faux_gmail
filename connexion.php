@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="FR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/connexion.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    
-    <title>Gmail</title>
-</head>
-
+<?php
+    session_start();
+    include_once("./src/connect_bdd.inc.php");
+?>
+<?php 
+    include_once "./src/head2.inc.php"
+?>
 <body>
     <header>
         <a href="#"><img class="logo" src="./asset/gmail_logo.png" alt="logo"></a>
@@ -43,6 +38,10 @@
                 
                    </form>
             </fieldset>
+            <?php
+            //inclusion
+            include_once "./src/log.inc.php";
+            ?>
 </div>            
     </main>
 
