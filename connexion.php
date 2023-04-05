@@ -10,9 +10,9 @@
         <a href="#"><img class="logo" src="./asset/gmail_logo.png" alt="logo"></a>
         <nav>
             <ul class="navigation">
-                <li><a href="#help"> POUR LES PROS</a></li>
-                <li><a href="./connexion.html"> CONNEXION</a></li>
-                <li><a href="./index.html">CRÉER UN COMPTE</a></li>
+                <li><a href="#"> POUR LES PROS</a></li>
+                <li><a href="./connexion.php"> CONNEXION</a></li>
+                <li><a href="./index.php">CRÉER UN COMPTE</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +25,7 @@
 
         <fieldset id="account">
                 <legend>Connexion</legend>
-                   <form>
+                <form action="" method="post">
                 
                         <label for="email">Mail</label> <br>
                         <input type="text" id="email" name="email" placeholder="Votre mail" aria-required="true"> <br>
@@ -38,7 +38,7 @@
                 
                    </form>
             </fieldset>
-            
+
             <?php
             //inclusion
             include_once "./src/log.inc.php";

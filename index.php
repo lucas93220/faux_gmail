@@ -10,9 +10,9 @@
         <a href="#"><img class="logo" src="./asset/gmail_logo.png" alt="logo"></a>
         <nav>
             <ul class="navigation">
-                <li><a href="#help">POUR LES PROS</a></li>
-                <li><a href="./connexion.html">CONNEXION</a></li>
-                <li><a href="#account">CRÉER UN COMPTE</a></li>
+                <li><a href="#">POUR LES PROS</a></li>
+                <li><a href="./connexion.php">CONNEXION</a></li>
+                <li><a href="./index.php">CRÉER UN COMPTE</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +30,7 @@
     <h3>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité.</h3>
         <fieldset id="account">
                 <legend>Créer un compte</legend>
-                   <form>
+                <form action="" method="post">
                 
                     
                         <label for="nom">Nom</label> <br>
