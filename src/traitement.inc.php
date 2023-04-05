@@ -4,7 +4,7 @@ try{
     if(isset($_POST['submit'])){
         error_reporting(E_ALL & ~E_WARNING);
         $nom = $_POST['nom'];
-        $prenom = $_POST['prénom'];
+        $prenom = $_POST['prenom'];
         $email = $_POST['mail'];
         $password = $_POST['psw'];
 
@@ -35,7 +35,7 @@ try{
         else
         {
             $password = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO accounts (nom, prénom, login, password) VALUES ('$nom', '$prenom', '$email', '$password')";
+            $sql = "INSERT INTO accounts (nom, prenom, login, password) VALUES ('$nom', '$prenom', '$email', '$password')";
             $req = $bdd->prepare($sql);
             $req->execute();
             echo "<p class=\"success\">Inscription effectuée :
