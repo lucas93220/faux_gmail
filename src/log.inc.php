@@ -1,4 +1,5 @@
 <?php
+
 try {
     $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
     $bdd = new PDO('mysql:host=localhost;dbname=gmail', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$pdo_options));
@@ -23,14 +24,15 @@ try {
                 $loggedIn = true;
                 break;
             }
+            if(!$loggedIn) {
+                echo "<strong>Email ou mot de passe incorrect.</strong>";
+                exit;
+            }
         }
     }
     $reponse->closeCursor();
 
-    if(!$loggedIn) {
-        echo "<strong>Email ou mot de passe incorrect.</strong>";
-        exit;
-    }
+   
 }
 catch(Exception $e) {
     die("Erreur de connexion : ".$e->getMessage());

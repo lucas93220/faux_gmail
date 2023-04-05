@@ -28,9 +28,9 @@
                 <form action="" method="post">
                 
                         <label for="email">Mail</label> <br>
-                        <input type="text" id="email" name="email" placeholder="Votre mail" aria-required="true"> <br>
+                        <input type="text" id="email" name="email" placeholder="Votre mail" aria-required="true" required> <br>
                         <label for="password">Mot de passe</label> <br>
-                        <input type="password" id="password" name="psw" placeholder="Votre mot de passe" aria-required="true"> <br>
+                        <input type="password" id="password" name="psw" placeholder="Votre mot de passe" aria-required="true" required> <br>
                 
                     <div class="bouton">
                     <input type="submit" id="submit" value="Valider votre compte" aria-label="Valider">

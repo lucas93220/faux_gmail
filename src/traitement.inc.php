@@ -1,4 +1,5 @@
 <?php
+
 try {
     $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
     $bdd = new PDO('mysql:host=localhost;dbname=gmail', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$pdo_options));
@@ -15,6 +16,7 @@ try {
             echo "<strong>Cette adresse e-mail est déjà utilisée</strong>";
             exit;
         }
+        
 
         $password = password_hash($password, PASSWORD_DEFAULT);
         $query = $bdd->prepare('INSERT INTO accounts (login, password) VALUES (:email, :password)');
@@ -27,7 +29,6 @@ try {
     }
 
    
-    echo "<strong>Veuillez remplir les champs email et mot de passe</strong>";
 } catch(Exception $e) {
     die("Erreur de connexion : ".$e->getMessage());
 }
