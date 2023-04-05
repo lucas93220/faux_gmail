@@ -179,3 +179,6 @@ fieldset form div input:hover, input:focus[type="submit"]{
   'GRAD' 0,
   'opsz' 48
 }
+strong{
+    text-align: center;
+}

@@ -1,45 +1,36 @@
 <?php
- try{
-    error_reporting(E_ALL & ~E_WARNING);
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $email = $_POST['email'];
-    $password = $_POST['psw'];
-    $_bdd=new PDO('mysql:host=localhost;dbname=gmail;charset=utf8', 'root', '');
-         }
-            catch(Exception $e)
-                  {
-                      die('Erreur : '.$e->getMessage());
-                  }
-                  
-                  if(isset($_POST['email']) || isset($_POST['psw'])){
-                     
-                    $_email = $_POST["email"];
-    
-                    //on test les chaines de caractère//
-                    if(!$_POST['email'] || !$_POST['psw']){
-                        echo "<p class=\"warning\">Vous avez obliez votre mail ou password?</p>";
-                        }
-                        else if(!filter_var($_email, FILTER_VALIDATE_EMAIL)){ //attention à ma fonction
-                            echo "<p class=\"warning\">Mail invalide</p>";
-                        }
-                        else if(is_numeric($_email)){
-                                echo "<p class=\"warning\">Vous devez saisir des caractères</p>";
-                        }
-                        else{
-    
-                        //password_hash($_POST['psw'],PASSWORD_DEFAULT);
-                        $password = password_hash($password, PASSWORD_DEFAULT);
-                        $req = $_bdd->prepare("INSERT INTO accounts (nom, prenom, login, password)VALUES('$nom','$prenom','$email','$password')");
-                        $req->execute();
+try {
+    $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+    $bdd = new PDO('mysql:host=localhost;dbname=gmail', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',$pdo_options));
 
-                        
-                        echo "<p class=\"success\">Merci votre contenu est ajouté : 
-                                <a href=\"connexion.php\" title=\"pub\">Connectez vous</a>
-                                
-                        </p>";
-                        
-                    }                
-                    
-                }
+    if(isset($_POST['email']) && isset($_POST['psw'])) {
+        $email = $_POST['email'];
+        $password = $_POST['psw'];
+
+        // Vérifier si l'email existe déjà dans la base de données
+        $query = $bdd->prepare('SELECT * FROM accounts WHERE login = :email');
+        $query->bindParam(':email', $email);
+        $query->execute();
+
+        if($query->rowCount() > 0) {
+            echo "<strong>Cette adresse e-mail est déjà utilisée</strong>";
+            exit;
+        }
+
+        // Si l'email n'existe pas encore, insérer une nouvelle entrée dans la base de données
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $query = $bdd->prepare('INSERT INTO accounts (login, password) VALUES (:email, :password)');
+        $query->bindParam(':email', $email);
+        $query->bindParam(':password', $password);
+        $query->execute();
+
+        echo "<strong>Inscription réussie</strong>";
+        exit;
+    }
+
+    // Si les champs email et psw ne sont pas renseignés
+    echo "<strong>Veuillez remplir les champs email et mot de passe</strong>";
+} catch(Exception $e) {
+    die("Erreur de connexion : ".$e->getMessage());
+}
 ?>

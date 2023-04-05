@@ -13,11 +13,13 @@ try {
             $email = $_POST['email'];
             $password = $_POST['psw'];
 
+            
+
             if(!$email || !$password) {
-                echo "<p class=\"warning\">Vous avez oublié votre mail ou password?</p>";
+                echo "<strong>Vous avez oublié votre mail ou password?</strong>";
                 exit;
             } else if($email == $data['login'] && password_verify($password, $data['password'])) {
-                echo "<p class=\"warning\">Vous êtes connecté</p>";
+                echo "<strong>Vous êtes connecté</strong>";
                 $loggedIn = true;
                 break;
             }
@@ -26,7 +28,7 @@ try {
     $reponse->closeCursor();
 
     if(!$loggedIn) {
-        echo "<p class=\"warning\">Email ou mot de passe incorrect.</p>";
+        echo "<strong>Email ou mot de passe incorrect.</strong>";
         exit;
     }
 }
