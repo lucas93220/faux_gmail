@@ -7,7 +7,6 @@ try {
         $email = $_POST['email'];
         $password = $_POST['psw'];
 
-        // Vérifier si l'email existe déjà dans la base de données
         $query = $bdd->prepare('SELECT * FROM accounts WHERE login = :email');
         $query->bindParam(':email', $email);
         $query->execute();
@@ -17,7 +16,6 @@ try {
             exit;
         }
 
-        // Si l'email n'existe pas encore, insérer une nouvelle entrée dans la base de données
         $password = password_hash($password, PASSWORD_DEFAULT);
         $query = $bdd->prepare('INSERT INTO accounts (login, password) VALUES (:email, :password)');
         $query->bindParam(':email', $email);
@@ -28,7 +26,7 @@ try {
         exit;
     }
 
-    // Si les champs email et psw ne sont pas renseignés
+   
     echo "<strong>Veuillez remplir les champs email et mot de passe</strong>";
 } catch(Exception $e) {
     die("Erreur de connexion : ".$e->getMessage());
