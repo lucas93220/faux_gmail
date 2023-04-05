@@ -17,15 +17,15 @@ try {
             
 
             if(!$email || !$password) {
-                echo "<strong>Vous avez oublié votre mail ou password?</strong>";
+                echo "<p>Vous avez oublié votre mail ou password?</p>";
                 exit;
             } else if($email == $data['login'] && password_verify($password, $data['password'])) {
-                echo "<strong>Vous êtes connecté</strong>";
+                echo "<p>Vous êtes connecté</p>";
                 $loggedIn = true;
                 break;
             }
             if(!$loggedIn) {
-                echo "<strong>Email ou mot de passe incorrect.</strong>";
+                echo "<p>Email ou mot de passe incorrect.</p>";
                 exit;
             }
         }

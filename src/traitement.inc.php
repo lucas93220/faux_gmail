@@ -13,7 +13,7 @@ try {
         $query->execute();
 
         if($query->rowCount() > 0) {
-            echo "<strong>Cette adresse e-mail est déjà utilisée</strong>";
+            echo "<p>Cette adresse e-mail est déjà utilisée</p>";
             exit;
         }
         
@@ -24,7 +24,7 @@ try {
         $query->bindParam(':password', $password);
         $query->execute();
 
-        echo "<strong>Inscription réussie</strong>";
+        echo "<p>Inscription réussie</p>";
         exit;
     }
 
