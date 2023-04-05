@@ -10,7 +10,7 @@
         <a href="#"><img class="logo" src="./asset/gmail_logo.png" alt="logo"></a>
         <nav>
             <ul class="navigation">
-                <li><a href="#">POUR LES PROS</a></li>
+                <li><a href="./index.php">POUR LES PROS</a></li>
                 <li><a href="./connexion.php">CONNEXION</a></li>
                 <li><a href="./index.php">CRÉER UN COMPTE</a></li>
             </ul>

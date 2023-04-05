@@ -7,7 +7,7 @@
 ?>
 <body>
     <header>
-        <a href="#"><img class="logo" src="./asset/gmail_logo.png" alt="logo"></a>
+        <a href="./index.php"><img class="logo" src="./asset/gmail_logo.png" alt="logo"></a>
         <nav>
             <ul class="navigation">
                 <li><a href="#"> POUR LES PROS</a></li>
