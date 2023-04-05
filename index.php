@@ -50,6 +50,7 @@
                 
                    </form>
             </fieldset>
+            
             <?php
             //inclusion
             include_once "./src/traitement.inc.php";

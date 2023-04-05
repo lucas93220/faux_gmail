@@ -1,6 +1,8 @@
 <?php
         try{// On se connecte à MySQL
             error_reporting(E_ALL & ~E_WARNING);
+                $nom = $_POST['nom'];
+                $prenom = $_POST['prenom'];
                 $email = $_POST['mail'];
                 $password = $_POST['psw'];
                 $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;

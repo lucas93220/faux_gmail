@@ -38,6 +38,7 @@
                 
                    </form>
             </fieldset>
+            
             <?php
             //inclusion
             include_once "./src/log.inc.php";
