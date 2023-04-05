@@ -50,7 +50,7 @@
                 
                    </form>
             </fieldset>
-            
+
             <?php
             //inclusion
             include_once "./src/traitement.inc.php";
@@ -63,7 +63,9 @@
     </footer>
 
  
-    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined"> expand_less
+    </span></button>
+     
 <script src="./app.js"></script>
 </body>
 </html>
