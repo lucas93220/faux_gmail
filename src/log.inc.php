@@ -17,7 +17,7 @@ try {
             
 
             if(!$email || !$password) {
-                echo "<p>Vous avez oublié votre mail ou password?</p>";
+                echo "<p class=\"warning\">Vous avez oublié votre mail ou password?</p>";
                 exit;
             } else if($email == $data['login'] && password_verify($password, $data['password'])) {
                 echo "<p>Vous êtes connecté</p>";
@@ -25,7 +25,7 @@ try {
                 break;
             }
             if(!$loggedIn) {
-                echo "<p>Email ou mot de passe incorrect.</p>";
+                echo "<p class=\"warning\">Email ou mot de passe incorrect.</p>";
                 exit;
             }
         }

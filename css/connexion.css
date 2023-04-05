@@ -129,4 +129,13 @@ fieldset form div input:hover, input:focus[type="submit"]{
 
 p{
     text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+p.warning{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #ff0000;
 }

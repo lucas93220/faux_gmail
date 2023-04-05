@@ -13,7 +13,7 @@ try {
         $query->execute();
 
         if($query->rowCount() > 0) {
-            echo "<p>Cette adresse e-mail est déjà utilisée</p>";
+            echo "<p class=\"warning\">Cette adresse e-mail est déjà utilisée</p>";
             exit;
         }
         
